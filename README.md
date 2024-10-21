@@ -2,6 +2,8 @@
 
 Welcome to "Guess the Word - Greek Edition," a fun word-guessing game implemented in Python using the Tkinter library. This game challenges you to guess a secret 5-letter Greek word within a limited number of attempts.
 
+**This project was implemented during the first semester, in the course MYY105 of the curriculum of the University of Ioannina.**
+
 
 ## Game Instructions
 **Objective:** Guess the secret 5-letter Greek word.
