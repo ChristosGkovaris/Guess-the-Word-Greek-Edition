@@ -1,3 +1,7 @@
+# Guess the Word (GR).
+# Created in July 2024.
+# Author Christos-Grigorios Gkovaris
+
 import tkinter as tk
 from tkinter import messagebox
 import random
