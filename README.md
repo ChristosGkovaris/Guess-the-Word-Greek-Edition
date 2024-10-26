@@ -24,7 +24,7 @@ Welcome to "Guess the Word - Greek Edition", a fun word-guessing game implemente
       git clone https://github.com/ChristosGkovaris/Guess-the-Word-Greek-Edition.git
       cd Guess-the-Word-Greek-Edition
 - Ensure you have Python installed: The game requires Python 3. Ensure you have it installed on your system.
-- Install Tkinter: Tkinter is required for the graphical user interface. It comes pre-installed with Python, but if you need to install it, use the following command: **sudo apt-get install python3-tk**
+- Install Tkinter: Tkinter is required for the graphical user interface. It comes pre-installed with Python, but if you need to install it, use the command **sudo apt-get install python3-tk**
 - Run the Game: **python guessword.py**
 
 
