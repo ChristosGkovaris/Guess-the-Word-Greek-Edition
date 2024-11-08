@@ -3,6 +3,7 @@ from tkinter import messagebox
 import random
 import os
 
+
 # Function to read words from the file
 def read_words_from_file(file_path):
     if not os.path.exists(file_path):
@@ -12,13 +13,16 @@ def read_words_from_file(file_path):
         words = [line.strip().upper() for line in file]
     return words
 
+
 # Function to select a random word from the list
 def select_random_word(word_list):
     return random.choice(word_list)
 
+
 # Function to check the validity of the word
 def check_word_validity(word, valid_letters):
     return len(word) == 5 and all(letter.isalpha() and letter in valid_letters for letter in word)
+
 
 # Main game class
 class GuessWordGame:
@@ -42,7 +46,8 @@ class GuessWordGame:
         
         # Create UI components
         self.create_widgets()
-        
+
+    
     def create_widgets(self):
         # Label for instructions
         self.instructions = tk.Label(self.root, text="Guess the 5-letter Greek word!")
@@ -59,7 +64,8 @@ class GuessWordGame:
         # Label to display feedback
         self.feedback = tk.Label(self.root, text="", font=('Arial', 14))
         self.feedback.pack()
-        
+
+    
     def submit_guess(self):
         guess = self.entry.get().upper()
         if check_word_validity(guess, greek_caps) and guess in self.words:
@@ -69,7 +75,8 @@ class GuessWordGame:
             self.entry.delete(0, tk.END)
         else:
             messagebox.showerror("Invalid Input", "Please enter a valid 5-letter Greek word.")
-        
+
+    
     def provide_feedback(self, guess):
         if guess == self.secret_word:
             self.feedback.config(text=f"Congratulations! You guessed the word '{self.secret_word}' in {self.attempts} attempts.")
@@ -80,6 +87,7 @@ class GuessWordGame:
             if self.attempts >= self.max_attempts:
                 self.feedback.config(text=f"Game Over! The word was '{self.secret_word}'.")
                 self.submit_button.config(state=tk.DISABLED)
+
     
     def get_feedback_text(self, guess):
         feedback = []
@@ -91,6 +99,7 @@ class GuessWordGame:
             else:
                 feedback.append(f"{guess[i]} (absent)")
         return ', '.join(feedback)
+
 
 # Create the main window and run the game
 if __name__ == "__main__":
